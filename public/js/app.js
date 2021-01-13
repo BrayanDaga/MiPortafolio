@@ -37274,6 +37274,8 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+__webpack_require__(/*! ./script */ "./resources/js/script.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -37318,6 +37320,41 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/script.js":
+/*!********************************!*\
+  !*** ./resources/js/script.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+(function ($) {
+  alert('hola'); // Closes responsive menu when a scroll trigger link is clicked
+
+  $('.js-scroll-trigger').click(function () {
+    $('.navbar-collapse').collapse('hide');
+  }); // Activate scrollspy to add active class to navbar items on scroll
+
+  $('body').scrollspy({
+    target: '#mainNav',
+    offset: 75
+  }); // Collapse Navbar
+
+  var navbarCollapse = function navbarCollapse() {
+    if ($("#mainNav").offset().top > 100) {
+      $("#mainNav").addClass("navbar-scrolled");
+    } else {
+      $("#mainNav").removeClass("navbar-scrolled");
+    }
+  }; // Collapse now if page is not at top
+
+
+  navbarCollapse(); // Collapse the navbar when page is scrolled
+
+  $(window).scroll(navbarCollapse); // Magnific popup calls
+})(jQuery); // End of use strict
 
 /***/ }),
 
