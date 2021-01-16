@@ -2,11 +2,11 @@
 
 //- Override and add to color system
 
-$orange: #f4623a;
-$brown: #5c4d42;
-
+$blue: #004e92;
+$bluedark: #021d33;
 //- Override primary color
-$primary: $orange;
+$primary: $blue;
+$secondary: $bluedark;
 
 //- Override font system
 $font-family-sans-serif: "Merriweather Sans", -apple-system, BlinkMacSystemFont,
