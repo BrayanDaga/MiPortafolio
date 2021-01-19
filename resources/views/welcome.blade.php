@@ -14,10 +14,11 @@
         <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
         <!-- Scripts -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet">
         <script src="{{ asset('js/app.js') }}" defer></script>
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -40,12 +41,13 @@
         @include('includes.services')
         @include('includes.portfolio')
 
-        <section class="text-white page-section bg-dark">
+        @include('includes.certificates')
+        {{-- <section class="text-white page-section bg-dark">
             <div class="container text-center">
                 <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
                 <a class="btn btn-light btn-xl" href="https://startbootstrap.com/theme/creative/">Download Now!</a>
             </div>
-        </section>
+        </section> --}}
 
         @include('includes.contact')
         @include('includes.footer')

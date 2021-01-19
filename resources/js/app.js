@@ -1,3 +1,4 @@
 require('./bootstrap');
-require('./script');
 require('./animatescroll');
+require('./magnificpopup');
+require('./script');

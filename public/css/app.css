@@ -11101,6 +11101,46 @@ header.masthead h1 {
   opacity: 1;
 }
 
+#certificates .image-link {
+  position: relative;
+  display: block;
+}
+
+#certificates .multi-item-carousel .carousel-inner > .item {
+  transition: 500ms ease-in-out left;
+}
+
+#certificates .multi-item-carousel .carousel-inner .active.left {
+  left: -33%;
+}
+
+#certificates .multi-item-carousel .carousel-inner .active.right {
+  left: 33%;
+}
+
+#certificates .multi-item-carousel .carousel-inner .next {
+  left: 33%;
+}
+
+#certificates .multi-item-carousel .carousel-inner .prev {
+  left: -33%;
+}
+
+@media all and (transform-3d), (-webkit-transform-3d) {
+  #certificates .multi-item-carousel .carousel-inner > .item {
+    transition: 500ms ease-in-out left;
+    transition: 500ms ease-in-out all;
+    -webkit-backface-visibility: visible;
+            backface-visibility: visible;
+    transform: none !important;
+  }
+}
+
+#certificates .multi-item-carousel .carouse-control.left,
+#certificates .multi-item-carousel .carouse-control.right {
+  background-image: none;
+}
+
 footer ul li {
   list-style-type: none;
   display: inline;

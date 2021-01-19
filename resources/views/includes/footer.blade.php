@@ -1,4 +1,4 @@
-<header class="pt-5 pb-5 mt-5 text-white bg-secondary">
+<footer class="pt-5 pb-5 mt-5 text-white bg-secondary">
     <div class="container">
       <div class="row">
         <div class="col-lg-5 col-xs-12 about-company">
@@ -24,10 +24,8 @@
           <p><i class="mr-3 fa fa-envelope-o"></i>info@hsdf.com</p>
         </div>
       </div>
-      <div class="mt-5 row">
-        <div class="col copyright">
-          <p class=""><small class="text-white-50">© 2019. All Rights Reserved.</small></p>
-        </div>
-      </div>
+      <div class="text-center container-fluid bg-secondary">
+        <p class=""><small class="text-white-50">© 2019. All Rights Reserved.</small></p>
     </div>
-</header>
+
+</footer>
