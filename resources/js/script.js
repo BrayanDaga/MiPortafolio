@@ -42,8 +42,25 @@
     // $('a.image-link').magnificPopup({type:'image'});
 
 
-    $('#certificates').magnificPopup({
-        delegate: 'a.image-link',
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        // center: true,
+        nav:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:4
+            }
+        }
+    })
+    $('.owl-carousel').magnificPopup({
+        delegate: 'a.img-link',
         type: 'image',
         tLoading: 'Loading image #%curr%...',
         mainClass: 'mfp-img-mobile',
@@ -56,6 +73,5 @@
           tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
         }
       });
-
 
 })(jQuery);
