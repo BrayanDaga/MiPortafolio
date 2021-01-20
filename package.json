@@ -1,7 +1,11 @@
 {
     "private": true,
     "scripts": {
-        "dev": "npm run development",
+        "dev": "razzle start",
+        "build": "razzle build",
+        "test": "razzle test --env=jsdom",
+        "start": "NODE_ENV=production node build/server.js",
+        "heroku-postbuild": "npm run build",
         "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
         "watch": "npm run development -- --watch",
         "watch-poll": "npm run watch -- --watch-poll",
