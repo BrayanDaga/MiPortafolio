@@ -1,7 +1,7 @@
 {
     "private": true,
     "scripts": {
-        "dev": "razzle start",
+        "dev": "npm run development",
         "build": "razzle build",
         "test": "razzle test --env=jsdom",
         "start": "NODE_ENV=production node build/server.js",
