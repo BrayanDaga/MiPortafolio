@@ -1,21 +1,46 @@
 <section class="page-section" id="contact">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="text-center col-lg-8">
-                <h2 class="mt-0">Let's Get In Touch!</h2>
-                <hr class="my-4 divider" />
-                <p class="mb-5 text-muted">Ready to start your next project with us? Give us a call or send us an email and we will get back to you as soon as possible!</p>
-            </div>
-        </div>
+        <!-- Contact Section Heading-->
+        <h2 class="mt-0 text-center">Contacteme</h2>
+        <hr class="my-4 divider primary">
+        <!-- Contact Section Form-->
         <div class="row">
-            <div class="mb-5 ml-auto text-center col-lg-4 mb-lg-0">
-                <i class="mb-3 fas fa-phone fa-3x text-muted"></i>
-                <div>+1 (555) 123-4567</div>
-            </div>
-            <div class="mr-auto text-center col-lg-4">
-                <i class="mb-3 fas fa-envelope fa-3x text-muted"></i>
-                <!-- Make sure to change the email address in BOTH the anchor text and the link target below!-->
-                <a class="d-block" href="mailto:contact@yourwebsite.com">contact@yourwebsite.com</a>
+            <div class="mx-auto col-lg-8">
+                <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
+                <form id="contactForm"  novalidate="novalidate" method="POST" action="/contactme">
+                    @csrf
+                    <div class="control-group">
+                        <div class="mb-0 form-group floating-label-form-group controls">
+                            <label>Name</label>
+                            <input class="form-control" id="name" type="text" placeholder="Name" required="required" name="name"  data-validation-required-message="Please enter your name." />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="mb-0 form-group floating-label-form-group controls">
+                            <label>Email Address</label>
+                            <input class="form-control" id="email" type="email" placeholder="Email Address" required="required" name="email" data-validation-required-message="Please enter your email address." />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="mb-0 form-group floating-label-form-group controls">
+                            <label>Phone Number</label>
+                            <input class="form-control" id="phone" type="tel" placeholder="Phone Number" required="required" name="phone" data-validation-required-message="Please enter your phone number." />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="mb-0 form-group floating-label-form-group controls">
+                            <label>Message</label>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required" name="content" data-validation-required-message="Please enter a message."></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <br />
+                    <div id="success"></div>
+                    <div class="form-group"><button class="btn btn-primary btn-xl" id="sendMessageButton" type="submit">Send</button></div>
+                </form>
             </div>
         </div>
     </div>

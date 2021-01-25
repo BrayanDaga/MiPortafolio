@@ -44,13 +44,6 @@
         @include('includes.portfolio')
 
         @include('includes.certificates')
-        {{-- <section class="text-white page-section bg-dark">
-            <div class="container text-center">
-                <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-                <a class="btn btn-light btn-xl" href="https://startbootstrap.com/theme/creative/">Download Now!</a>
-            </div>
-        </section> --}}
-
         @include('includes.contact')
         @include('includes.footer')
 
