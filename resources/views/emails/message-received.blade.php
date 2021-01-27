@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Contenido de Email</title>
-</head>
-<body>
-    <p>Recibiste un mensaje de : {{ $msg['name'] }} - {{ $msg['email'] }}</p>
+@component('mail::message')
+<p>Recibiste un mensaje de : {{ $msg['name'] }} - {{ $msg['email'] }}</p>
     <p><strong>Asunto:</strong> {{ $subject }}  </p>
     <p><strong>Contenido:</strong> {{ $msg['content'] }} </p>
-</body>
-</html>
+</p>
+@component('mail::button', ['url' => 'http://portafolio.test/'])
+Ir a la pagina
+@endcomponent
+
+Gravias,<br>
+{{ config('app.name') }}
+@endcomponent
