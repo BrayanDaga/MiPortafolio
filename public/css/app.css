@@ -11152,7 +11152,10 @@ form .row:first-child .floating-label-form-group {
 
 footer ul li {
   list-style-type: none;
-  display: inline;
+}
+
+footer .links .svg-inline--fa {
+  font-size: 1.5rem;
 }
 
 .text-white-75 {
