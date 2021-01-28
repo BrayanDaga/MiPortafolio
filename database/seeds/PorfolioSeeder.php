@@ -17,7 +17,7 @@ class PorfolioSeeder extends Seeder
             'image' => 'assets/img/portfolio/sales-purchases.PNG',
             'git' => 'https://github.com/BrayanDaga/sis-ventas',
             'demo' => 'http://mysalesphp.herokuapp.com/login',
-            'desc' => 'Descripcion del proyecto'
+            'desc' => '(En proceso) Sistema de ventas desarrollado en laravel crud de proveedor , cliente , producto y compa'
         ]);
     }
 }
