@@ -7,7 +7,7 @@
         <div class="row">
             <div class="mx-auto col-lg-8">
 
-                <form id="contactForm"   method="POST" action="/contactme">
+                <form id="contactForm"   method="POST" action="{{ route('contact.me') }}">
                     @csrf
                     <div class="control-group">
                         <div class="mb-0 form-group floating-label-form-group controls">

@@ -2,7 +2,7 @@
     <div class="container">
       <div class="mb-5 row">
         <div class="col-6">
-          <img class="img-fluid" src="assets/img/perfil.png" alt="">
+          {{-- <img class="img-fluid" src="assets/img/perfil.png" alt=""> --}}
         </div>
         <div class="col-6 links">
           <h4 class="mt-lg-0 mt-sm-3">Links</h4>

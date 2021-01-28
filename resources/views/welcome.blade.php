@@ -40,7 +40,7 @@
         </nav>
         @include('includes.header')
         @include('includes.about')
-        @include('includes.services')
+        {{-- @include('includes.services') --}}
         @include('includes.portfolio')
 
         @include('includes.certificates')
