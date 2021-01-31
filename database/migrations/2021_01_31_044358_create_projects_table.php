@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePorfoliosTable extends Migration
+class CreateProjectsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreatePorfoliosTable extends Migration
      */
     public function up()
     {
-        Schema::create('porfolios', function (Blueprint $table) {
+        Schema::create('projects', function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->string('image');
@@ -31,6 +31,6 @@ class CreatePorfoliosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('porfolios');
+        Schema::dropIfExists('projects');
     }
 }

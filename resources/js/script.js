@@ -78,27 +78,24 @@
       $('#contactForm').submit(function(event){
         event.preventDefault();
         $("#contactForm").validate();
-
-        let message =  $('message').val();
-        let phone = $('phone').val();
-        let name = $('name').val();
-        let email = $('email').val();
-        if ( message != ''  && phone != '' && name != '' && email != '' ) {
             $.ajax({
                 type: 'POST',
                 url: $(this).attr('action'),
                 data: $(this).serialize(),
                 beforeSend: function() {
                     $('#status').text('Enviando..');
-                    $('#sendMessageButton').hide();
+                    $('#sendMessageButton').prop('disabled', true);
                 }
             })
             .done(function(response){
                 $('#status').text('Enviado!!');
-                $('#sendMessageButton').show();
+                $('#sendMessageButton').prop('disabled', false);
                 // $('#result').html(response);
-            });
-        }
+            })
+            .fail(function(request, errorType, errorMessage){
+                //timeout, error, abort, parseerror
+                alert(errorMessage);
+            })
 
     });
 

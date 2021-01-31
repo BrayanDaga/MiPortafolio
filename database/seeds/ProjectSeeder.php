@@ -1,9 +1,9 @@
 <?php
 
-use App\Porfolio;
+use App\Project;
 use Illuminate\Database\Seeder;
 
-class PorfolioSeeder extends Seeder
+class ProjectSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,7 +12,7 @@ class PorfolioSeeder extends Seeder
      */
     public function run()
     {
-        Porfolio::create([
+        Project::create([
             'title' => 'Sistema de Ventas',
             'image' => 'assets/img/portfolio/sales-purchases.PNG',
             'git' => 'https://github.com/BrayanDaga/sis-ventas',

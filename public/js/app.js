@@ -44500,25 +44500,21 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
   $('#contactForm').submit(function (event) {
     event.preventDefault();
     $("#contactForm").validate();
-    var message = $('message').val();
-    var phone = $('phone').val();
-    var name = $('name').val();
-    var email = $('email').val();
-
-    if (message != '' && phone != '' && name != '' && email != '') {
-      $.ajax({
-        type: 'POST',
-        url: $(this).attr('action'),
-        data: $(this).serialize(),
-        beforeSend: function beforeSend() {
-          $('#status').text('Enviando..');
-          $('#sendMessageButton').hide();
-        }
-      }).done(function (response) {
-        $('#status').text('Enviado!!');
-        $('#sendMessageButton').show(); // $('#result').html(response);
-      });
-    }
+    $.ajax({
+      type: 'POST',
+      url: $(this).attr('action'),
+      data: $(this).serialize(),
+      beforeSend: function beforeSend() {
+        $('#status').text('Enviando..');
+        $('#sendMessageButton').prop('disabled', true);
+      }
+    }).done(function (response) {
+      $('#status').text('Enviado!!');
+      $('#sendMessageButton').prop('disabled', false); // $('#result').html(response);
+    }).fail(function (request, errorType, errorMessage) {
+      //timeout, error, abort, parseerror
+      alert(errorMessage);
+    });
   });
 })(jQuery);
 
